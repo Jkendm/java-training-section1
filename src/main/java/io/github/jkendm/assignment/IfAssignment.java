@@ -21,7 +21,7 @@ public class IfAssignment {
             case "blinking red" -> "Treat as a stop sign";
             case "blinking yellow" -> "Proceed with caution";
             default -> "Invalid color";
-        };
+        }; //add semicolon because we are assigning a value to action
         System.out.println("If the light is " + color + ", you should: " + action);
 
           scanner.close();
