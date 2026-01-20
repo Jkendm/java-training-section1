@@ -1,4 +1,5 @@
 package io.github.jkendm.assignment;
+// Grade assignment in the notes
 
 import java.util.Scanner;
 
