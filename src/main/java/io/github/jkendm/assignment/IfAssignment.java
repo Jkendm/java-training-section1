@@ -5,8 +5,29 @@ import java.util.Scanner;
 public class IfAssignment {
     public static void main(String[] args) {
         //ageCategory();
-        CalculatorOperations();
+        //CalculatorOperations();
+        TrafficLightSystem();
+
     }
+    public static void TrafficLightSystem(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter traffic light color: ");
+        String color = scanner.nextLine();  
+
+        String action = switch (color){
+            case "red" -> "Stop";
+            case "yellow" -> "Prepare to stop ";
+            case "green" -> "Go";
+            case "blinking red" -> "Treat as a stop sign";
+            case "blinking yellow" -> "Proceed with caution";
+            default -> "Invalid color";
+        };
+        System.out.println("If the light is " + color + ", you should: " + action);
+
+          scanner.close();
+        }
+      
+    
     public static void CalculatorOperations() {
         Scanner scanner = new Scanner(System.in);
         // Enter first number
@@ -17,7 +38,7 @@ public class IfAssignment {
         System.out.println("Enter second number: ");
         int num2 = scanner.nextInt();
         // Enter operator
-        System.out.println("Enter an operator (+, -, *, /): ");
+        System.out.println("Enter an operator (+, -, *, /, %): ");
         char operator = scanner.next().charAt(0);
         // Perform operation based on operator
         double result;
@@ -51,6 +72,7 @@ public class IfAssignment {
                 System.out.println("Error: Invalid operator.");
                 break;
         }
+        scanner.close();
     }
 
 
