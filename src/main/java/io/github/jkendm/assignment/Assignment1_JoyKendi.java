@@ -1,4 +1,5 @@
 package io.github.jkendm.assignment;
+//Calculator Assignment in notes 
 
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class Assignment1_JoyKendi {
         int num2 = scanner.nextInt();
         System.out.println("num2: " + num2);
         
-        arithmeticOperators(num1, num2, scanner);
+        arithmeticOperators(num1, num2, scanner); // Call the method to perform arithmetic operations
     }
     
     public static void arithmeticOperators(int num1, int num2, Scanner scanner) {
