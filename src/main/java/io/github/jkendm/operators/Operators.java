@@ -4,10 +4,10 @@ public class Operators {
 static int a =15 , b =4;
     public static void main(String[] args) {
         
-        arithmeticOperators();
-        relationalOperators();
-        logicalOperators();
-        assignmentOperators();
+        //arithmeticOperators();
+        //relationalOperators();
+        //logicalOperators();
+        //assignmentOperators();
         incrementDecrementOperators();
     }
 
