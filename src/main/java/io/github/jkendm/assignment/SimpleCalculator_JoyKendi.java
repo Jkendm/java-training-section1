@@ -27,10 +27,10 @@ public class SimpleCalculator_JoyKendi {
         double memory = 0;
         double lastResult = 0;
         ArrayList<String> history = new ArrayList<>();
-        final int MAX_HISTORY = 5;
+        final int MAX_HISTORY = 5; //setting a constant to only get 5 last history
 
         System.out.println("========== Welcome to Simple Calculator ==========");
-
+ // while loop to help display the menu
         while (true) {
 
             System.out.println("\n1. Addition");
@@ -54,7 +54,7 @@ public class SimpleCalculator_JoyKendi {
             }
 
             double num1 = 0, num2 = 0, result = 0;
-
+// Square root only accepts one number hence the use of if statement
             if (choice >= 1 && choice <= 6) {
                 System.out.print("Enter first number: ");
                 num1 = scanner.nextDouble();
@@ -64,12 +64,12 @@ public class SimpleCalculator_JoyKendi {
                 System.out.print("Enter number: ");
                 num1 = scanner.nextDouble();
             }
-
+// Used switch to perform the operations
             switch (choice) {
 
                 case 1:
                     result = num1 + num2;
-                    history.add(num1 + " + " + num2 + " = " + result);
+                    history.add(num1 + " + " + num2 + " = " + result); 
                     break;
 
                 case 2:
@@ -143,7 +143,7 @@ public class SimpleCalculator_JoyKendi {
 
             System.out.println("Result: " + result);
 
-            // ✅ Ask user if they want to continue
+            //Ask user if they want to continue
             System.out.print("Do you want to continue? (y/n): ");
             char continueChoice = scanner.next().charAt(0);
 
