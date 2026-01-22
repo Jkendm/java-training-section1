@@ -1,6 +1,7 @@
 package io.github.jkendm.variablescope;
 
 //import java.lang.System.Logger;
+// Variable Scope- defining the methods in a scope
 
 public class Main {
 
