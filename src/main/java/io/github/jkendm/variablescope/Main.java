@@ -11,22 +11,28 @@ public class Main {
     public static void main(String[] args) {
         //System.out.println("config = " + config);
        // logger.info("config = " + config);
-        printVariable();
-    }
+        // printVariable();
+  
 
-    public static void printVariable(){
-        System.out.println("config = " + config);
-        int a = 20;
-        System.out.println(" a = " + a);
-    }
+    //public static void printVariable(){
+    //    System.out.println("config = " + config);
+      //  int a = 20;
+     //   System.out.println(" a = " + a);
+   // }
 
-    public void carInfo(){
-        Car car = new Car(); // creating an object
+   //it must be within the main 
+        Car car = new Car( 11, "Benz", "red"); // creating an object
         //create an object before accessing using the dot notation
-        car.id=11;
-        car.model="Benz";
-        car.color="Gold";
+ 
+        //initializing
+        car.displayInfo();
+        //car.regNo=11;
+        //car.model="Benz";
+        //car.color="Gold";
 
-    }
+        car.startEngine();
+        car.stopEngine();
+
+    }}
     
-}
+

@@ -21,9 +21,11 @@ public class Exercise_JoyKendisee06 {
         char gradeScore = getGradeScore(average);
         System.out.println("The Score is  " + gradeScore);
 
-       double lowest = lowestGrade(grades);
+        // Looking for the lowest grade
+        double lowest = lowestGrade(grades);
         System.out.println("Lowest Grade " + lowest);
 
+        // looking for the highest grade
          double highest = highestGrade(grades);
         System.out.println("Highest Grade " + highest);
 
