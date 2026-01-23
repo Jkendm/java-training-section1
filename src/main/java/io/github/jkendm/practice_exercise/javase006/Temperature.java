@@ -1,4 +1,4 @@
-package io.github.jkendm.practice_exercise;
+package io.github.jkendm.practice_exercise.javase006;
 
 import java.util.Scanner;
 
