@@ -71,7 +71,7 @@ public class Book {
         return this.available;
        }
 
-       public void displayInfo(){
+       public void printInfo(){
         System.out.println("The book is titled: " + title + " and written by: " + author + " at $-" + price + "-isbn-" + isbn + "available: " + available );
        }
     } 
