@@ -8,6 +8,35 @@ public class Dog extends Animal {
         super(name);//check the parent constructor and submit name
     }
 
+    //when using the protected
+   // public void makeSound(){
+   //     System.out.println("A dog barks");
+  //  }
+
+
+  // @Override //overriding for the base function
+   // public void makeSound(){
+   //     System.out.println(super.name + "A dog barks");
+
+   //this - refers to the current class, super- refers to the parent class
+   //without the key word- the compiler first looks at the subclass then looks at the parent class
+
+   //public void makeSound2(){
+   // super.makeSound
+  // }
+
+   //public void makeSound2(){
+   // this.makeSound
+  // }
+
+  
+   //public void makeSound2(){
+   // super.makeSound
+  // }
+
+
+
+    @Override //overriding for the base function
     public void makeSound(){
         System.out.println("A dog barks");
     }
