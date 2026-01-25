@@ -1,80 +1,108 @@
 package io.github.jkendm.assessment2_se010_joykendi;
 
+import java.util.LinkedList;
+
 public class BankAccount {
+
     private String accountNumber;
-    private  String accountHolder;
-    private  double balance;
-    private String password; //adding for bonus - password authentication
-    
-    
-    //defining the constructor with validation
-    public BankAccount(String accountNumber, String accountHolder, double balance){
+    private String accountHolder;
+    protected double balance;
+    private String password;
+    private LinkedList<String> transactions = new LinkedList<>();
+
+    // Constructor
+    public BankAccount(String accountNumber, String accountHolder, double balance, String password)
+            throws InvalidAmountException {
+
         setAccountNumber(accountNumber);
         setAccountHolder(accountHolder);
-        setBalance(balance);
 
+        if (balance < 0) {
+            throw new InvalidAmountException("Initial balance cannot be negative");
+        }
+
+        this.balance = balance;
+        this.password = password;
+        addTransaction("Account created with balance $" + balance);
     }
 
-    //setting getters and setter
+    // Add transaction (max 10)
+    protected void addTransaction(String detail) {
+        if (transactions.size() == 10) {
+            transactions.removeFirst();
+        }
+        transactions.add(detail);
+    }
 
-      public String getAccountNumber(){
+    // Show transactions
+    public void showTransactions() {
+        System.out.println("Transaction history for account " + accountNumber + ":");
+        for (String t : transactions) {
+            System.out.println("- " + t);
+        }
+    }
+
+    // Authentication
+    public boolean authenticate(String inputPassword) {
+        return password.equals(inputPassword);
+    }
+
+    // Getters & setters
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(String accountNumber){
-        if(accountNumber != null && !accountNumber.trim().isEmpty()){
-             this.accountNumber=accountNumber;
-
-        }else{
-        throw new RuntimeException("Account number cannot be null or empty");
-    }
+    public void setAccountNumber(String accountNumber) {
+        if (accountNumber == null || accountNumber.trim().isEmpty()) {
+            throw new RuntimeException("Account number cannot be null or empty");
+        }
+        this.accountNumber = accountNumber;
     }
 
-       public String getAccountHolder(){
+    public String getAccountHolder() {
         return accountHolder;
     }
 
-    public void setAccountHolder(String accountHolder){
-        if(accountHolder!= null && !accountHolder.trim().isEmpty()){
-             this.accountHolder=accountHolder;
+    public void setAccountHolder(String accountHolder) {
+        if (accountHolder == null || accountHolder.trim().isEmpty()) {
+            throw new RuntimeException("Account holder cannot be null or empty");
+        }
+        this.accountHolder = accountHolder;
+    }
 
-        }else{
-        throw new RuntimeException("Account number cannot be null or empty");
-    }
-    }
-  //getBalance
-      public double getBalance(){
+    public double getBalance() {
         return balance;
     }
 
-      public void setBalance(double balance){
-        this.balance=balance;
-    }
-
-//defining the method deposit and withdraw
-
-    public void deposit( double amount){
-        if(amount > 0){
-            balance += amount;
-            System.out.println("The deposit is " + amount);
-
+    // Deposit
+    public void deposit(double amount) throws InvalidAmountException {
+        if (amount <= 0) {
+            throw new InvalidAmountException("Deposit amount must be positive");
         }
-        
+
+        balance += amount;
+        addTransaction("Deposited $" + amount);
     }
 
-    public void withdraw (double amount){
-        if (amount > 0 && amount <= balance){
-            balance -= amount;
-            System.out.println("The withdraw is " + amount);
+    // Withdraw
+    public void withdraw(double amount)
+            throws InvalidAmountException, InsufficientFundsExceptions {
 
-        } else {
-            System.out.println("Balance is insufficient");
+        if (amount <= 0) {
+            throw new InvalidAmountException("Withdraw amount must be positive");
         }
+
+        if (amount > balance) {
+            throw new InsufficientFundsExceptions("Insufficient funds");
+        }
+
+        balance -= amount;
+        addTransaction("Withdrew $" + amount);
     }
 
-    //defining to toString - returns string representation of an object
-@Override
-public String toString() { 
-    return "Account[" + accountNumber + "] Holder: " + accountHolder + " Balance: $" + balance; 
-}
+    // toString
+    @Override
+    public String toString() {
+        return "Account[" + accountNumber + "] Holder: " + accountHolder + " Balance: $" + balance;
+    }
 }

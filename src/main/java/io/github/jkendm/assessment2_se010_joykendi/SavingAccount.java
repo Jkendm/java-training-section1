@@ -5,8 +5,8 @@ public class SavingAccount extends BankAccount {
     private double interestRate;                 // interest rate for savings
     private static final double MIN_BALANCE = 100.0; // minimum balance requirement
 
-    public SavingAccount(String AccountNumber, String accountHolder,double balance, double interestRate){
-        super(AccountNumber, accountHolder, balance);
+    public SavingAccount(String AccountNumber, String accountHolder,double balance,String password, double interestRate){
+        super(AccountNumber, accountHolder, balance,password);
         this.interestRate=interestRate;
     }
 
