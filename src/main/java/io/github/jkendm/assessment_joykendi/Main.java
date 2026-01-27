@@ -1,4 +1,10 @@
+/*
+Name:Joy Kendi
+Date: 25th January, 2026
+question 1-4
+ */
 package io.github.jkendm.assessment_joykendi;
+
 
 public class Main {
     public static void main(String[] args) {

@@ -1,3 +1,21 @@
+/*
+Basic Bank Account System
+Name:Joy Kendi
+Date:25/01/2026
+
+*
+*
+* Features Implemented:
+* - Complete encapsulation with validation
+* - Inheritance hierarchy (Savings/Checking accounts)
+* - Polymorphic account management
+* - Custom exception handling
+*
+* Bonus Features: 
+1. Transaction History
+2. Account Transfers
+3. Password protection
+ */
 package io.github.jkendm.assessment2_se010_joykendi;
 
 import java.util.Scanner;

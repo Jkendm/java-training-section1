@@ -5,7 +5,7 @@ public class SavingAccount extends BankAccount {
     private double interestRate;                 // interest rate for savings
     private static final double MIN_BALANCE = 100.0; // minimum balance requirement
 
-    public SavingAccount(String AccountNumber, String accountHolder,double balance,String password, double interestRate){
+    public SavingAccount(String AccountNumber, String accountHolder,double balance,String password, double interestRate)throws InvalidAmountException{
         super(AccountNumber, accountHolder, balance,password);
         this.interestRate=interestRate;
     }
@@ -14,7 +14,7 @@ public class SavingAccount extends BankAccount {
 //override withdraw to enforce minimum balance
  public void withdraw (double amount){
         if (amount > 0 && (getBalance()-amount)>=MIN_BALANCE){
-           setBalance(getBalance()-amount);
+           balance -= amount;
             System.out.println("The withdraw is " + amount);
 
         } else {
