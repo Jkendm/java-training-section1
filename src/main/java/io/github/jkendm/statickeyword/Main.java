@@ -13,6 +13,9 @@ public class Main {
     System.out.println(joyKendi.getId());//you can't make reference to a static keyword if the method isn't static
 
     System.out.println(Math.pow(10, 2)); //make use of static reference
+
+    
+    System.out.println(MathUtillity.Adder.add(10,20,30,40,50));
     }
 
     
