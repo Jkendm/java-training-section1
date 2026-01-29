@@ -1,5 +1,5 @@
 package io.github.jkendm.polyabstract;
-
+// Method overloading- same name, different parameters
 public class MathOperations {
 // Version 1: Two integers
     public int add(int a, int b) {
