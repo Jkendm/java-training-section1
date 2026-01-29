@@ -1,6 +1,7 @@
 package io.github.jkendm.statickeyword;
 
 public class MathUtillity {
+    //static classes -access them directly
     static class Adder{
         public static double add ( double...number){
             double result=0.0;
@@ -24,6 +25,10 @@ public class MathUtillity {
             return l*w*h;
         }
 
+     }
+
+     public class NonStaticClass{
+        //create an instance to access it
      }
 
 }
