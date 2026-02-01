@@ -1,4 +1,13 @@
 package io.github.jkendm.assessment3_joykendi.problem1;
+/**
+* Assessment 3: Mid-Term Practical Test
+* Student: Joy Kendi
+* Date: 01-02-2026
+* Problem: Problem 1
+* 
+* Key Features:
+* - Polymorphic behavior and Encapsulation
+*/
 
 public class Main {
     //defining the objects

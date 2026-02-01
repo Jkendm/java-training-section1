@@ -1,4 +1,17 @@
 package io.github.jkendm.assessment3_joykendi.problem3;
+/**
+* Assessment 3: Mid-Term Practical Test
+* Student: Joy Kendi
+* Date: 02-01-2026
+* Problem: Problem 3
+* 
+* Key Features:
+* - Encapsulation
+*- Abstraction
+* - Checked and unchecked exception: 
+1.OutOfStockException
+2.InvalidProductException
+*/
 
 public class Main {
     public static void main(String[] args) {

@@ -1,1 +1,19 @@
-//
+1. The Public declaration breaks encapsulation hence anyone can access the code 
+public String companyName -> private static String companyName = "Buuri Agro-Chemicals";
+
+2. defining the constructor- All the variables have to be declared 
+3. 
+public void setSalary(double salary) {
+if (salary < 0) {
+System.out.println("Salary cannot be negative");
+}
+salary = salary;
+}
+
+//salary=salary -> does nothing 
+//the assigned value was invalid so a throw statement is better applicable for the if statement
+
+4.Bonus calculation - declared Void but had a return value
+public void calculateBonus() {
+return salary * 0.1;}
+
