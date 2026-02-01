@@ -1,6 +1,6 @@
 package io.github.jkendm.assessment3_joykendi.problem3;
 
-abstract class Product {
+public abstract class Product {
     protected String productId;
     protected String name;
     protected double price;
