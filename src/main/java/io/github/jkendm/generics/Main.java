@@ -5,6 +5,8 @@ public class Main {
       
     }
 
-    private static void boxOperation()
+    private static void boxOperation(){
+        
+    }
     
 }
