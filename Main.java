@@ -1,0 +1,10 @@
+public class Main{
+ public static void main(String[] args) {
+     
+// Multiple potential exceptions
+String input = args[0];  // ArrayIndexOutOfBoundsException if no args
+int number = Integer.parseInt(input);  // NumberFormatException if not a number- converts a string into an integer
+int result = 100 / number;  // ArithmeticException if zero
+System.out.println("Result: " + result);
+}
+}
