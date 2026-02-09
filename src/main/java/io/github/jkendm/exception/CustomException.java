@@ -3,6 +3,9 @@ package io.github.jkendm.exception;
 import java.util.HashSet;
 import java.util.Set;
 
+//checked exception- forced to handle the exception using the try-catch block
+//unchecked exception- not forced to handle them
+
 public class CustomException{
    static Set<String> names = new HashSet<>(Set.of("John" , "Lucy", "Kendi","Steve"));
     public static void main(String[] args) {
